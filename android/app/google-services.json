@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "631469996703",
+    "project_id": "test-fluternotify",
+    "storage_bucket": "test-fluternotify.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631469996703:android:5631bb200116390dfb00aa",
+        "android_client_info": {
+          "package_name": "com.example.notifications_teste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631469996703-qcshpvs9ko1u1m6a2tvsm1b1ucna2qql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3iC-eKZDO71YQhSmf4ZXYTrLeta4bmRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631469996703-qcshpvs9ko1u1m6a2tvsm1b1ucna2qql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
