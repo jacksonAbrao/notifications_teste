@@ -22,6 +22,7 @@ class CustomNotification {
 class NotificationService {
   late FlutterLocalNotificationsPlugin localNotificationsPlugin;
   late AndroidNotificationDetails anrdoidDetails;
+  late IOSNotificationDetails iosDetails;
 
   NotificationService() {
     localNotificationsPlugin = FlutterLocalNotificationsPlugin();
@@ -41,11 +42,13 @@ class NotificationService {
 
   _initializeNotifications() async {
     const android = AndroidInitializationSettings('@mipmap/ic_launcher');
+    const ios = IOSInitializationSettings();
     // fazer para: Mac, ios, windows...
 
     await localNotificationsPlugin.initialize(
       const InitializationSettings(
         android: android,
+        iOS: ios,
       ),
       onSelectNotification: _onSelectNotification,
     );
@@ -68,12 +71,20 @@ class NotificationService {
       enableVibration: true,
     );
 
+    iosDetails = const IOSNotificationDetails(
+      subtitle: 'Liga',
+      presentAlert: true,
+      presentBadge: true,
+      presentSound: true,
+    );
+
     localNotificationsPlugin.show(
       notification.id,
       notification.title,
       notification.body,
       NotificationDetails(
         android: anrdoidDetails,
+        iOS: iosDetails,
       ),
       payload: notification.payload,
     );
